@@ -30,12 +30,13 @@ var userSchema = new mongoose.Schema(
     },
     khoa: {
       type: String,
-      required: true,
+      default: "",
       trim: true,
     },
     nganh: {
       type: String,
-      required: true,
+      default: "",
+
       trim: true,
     },
     learn: { type: Array },

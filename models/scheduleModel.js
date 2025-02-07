@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const ScheduleSchema = new mongoose.Schema(
   {
     course: {
-      type: String,
+      type: Object,
       required: true,
     },
     date: {

@@ -15,7 +15,7 @@ const scheduleRoutes = require("./routes/scheduleRoutes");
 const registerCourseRoutes = require("./routes/registerCourseRoutes");
 const formsRoutes = require("./routes/formRoutes");
 const { register } = require("module");
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
+const allowedOrigins = ["http://localhost:3000", "http://localhost:3002"];
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(
   cors({
