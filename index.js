@@ -14,8 +14,10 @@ const coursesRoutes = require("./routes/courseRoutes");
 const scheduleRoutes = require("./routes/scheduleRoutes");
 const registerCourseRoutes = require("./routes/registerCourseRoutes");
 const formsRoutes = require("./routes/formRoutes");
+const registrationStatusRoutes = require("./routes/RegistrationStatusRoutes");
+
 const { register } = require("module");
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3002"];
+const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(
   cors({
@@ -48,6 +50,7 @@ app.use("/api/courses", coursesRoutes);
 app.use("/api/schedule", scheduleRoutes);
 app.use("/api/registerCourse", registerCourseRoutes);
 app.use("/api/forms", formsRoutes);
+app.use("/api/registrationStatus", registrationStatusRoutes);
 
 app.listen(8080, () => {
   console.log("Server running on port 8080");
