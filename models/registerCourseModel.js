@@ -12,6 +12,11 @@ const RegisterCourseSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    paymentStatus: {
+      type: Boolean,
+      default: false,
+    },
+    datePayment: { type: Date, default: null },
   },
   {
     timestamps: true,
