@@ -81,3 +81,12 @@ exports.downloadFile = async (req, res) => {
     res.status(500).send("Server error");
   }
 };
+exports.deleteClass = async (req, res) => {
+  try {
+    const dlClass = await Class.findByIdAndDelete(req.params.id);
+    if (!dlClass) return res.status(404).json({ error: "Class not found" });
+    res.json({ message: "Class deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};

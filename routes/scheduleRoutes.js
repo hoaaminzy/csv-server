@@ -13,7 +13,7 @@ const router = express.Router();
 router.post("/schedule", createSchedule);
 router.get("/get-all-schedule", getAllSchedule);
 router.get("/schedule/:id", getScheduleById);
-router.put("/schedule/:id", updateSchedule);
+router.put("/:id", updateSchedule);
 router.delete("/schedule/:id", deleteSchedule);
 
 module.exports = router;
